@@ -3,7 +3,13 @@ import React from 'react'
 const Billing = () => {
   return (
     <>
-      <div className='md:flex px-4 py-2 gap-3'>
+    <div className='md:flex gap-4 border border-gray-400 rounded-xl bg-white w-80 px-5 py-2 ml-4 mt-5 text-center'>
+      <p className=''>Massage</p>
+      <p className=''>Social</p>
+      <p className=''>Notification</p>
+      <p className=''>Backup</p>
+    </div>
+      <div className='md:flex px-4 gap-3'>
         <div>
           <div className='md:flex items-center '>
             <div className='md:flex items-center gap-6'>
@@ -32,15 +38,15 @@ const Billing = () => {
               <h1 className='text-base font-medium text-gray-700'>Payment Method</h1>
               <button className='border border-gray-400 rounded-xl px-4 py-2 bg-gray-800 text-white'>+Add New Card</button>
             </div>
-            <div className='md:flex items-center justify-between mt-6'>
-              <div className='flex items-center gap-24 border border-gray-400 rounded-xl bg-white px-5 py-3'>
+            <div className='md:flex items-center justify-between mt-6 gap-4'>
+              <div className='flex items-center gap-20 border border-gray-400 rounded-xl bg-white px-5 py-3'>
                 <div className='flex items-center gap-3'>
                   <img src="./business.png" alt="money" className='w-14 mx-auto' />
                   <p className='text-base font-medium'>*** **** *** 7852</p>
                 </div>
                 <a href="#"><i class="ri-pencil-fill"></i></a>
               </div>
-              <div className='flex items-center gap-24 border border-gray-400 rounded-xl bg-white px-5 py-3'>
+              <div className='flex items-center gap-20 border border-gray-400 rounded-xl bg-white px-5 py-3'>
                 <div className='flex items-center gap-3'>
                   <img src="./visa.png" alt="visa" className='w-10 mx-auto' />
                   <p className='text-base font-medium'>*** **** *** 5248</p>

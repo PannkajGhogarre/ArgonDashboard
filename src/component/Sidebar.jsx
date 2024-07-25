@@ -47,10 +47,10 @@ const Sidebar = ({isOpen}) => {
                         <div className='items-center justify-center text-center mt-5'>
                             <h2 className='text-base font-medium'>Account Pages</h2>
 
-                            <div className='md:flex items-start  p-2 gap-5'>
+                            <NavLink to={'profile'} className={({isActive}) => `${isActive ? "bg-gradient-to-tr from from-indigo-200 to-indigo-100 text-indigo-800 rounded-lg" : "hover:bg-indigo-50 text-gray-600 rounded-lg p-1"} flex flex-col items-center md:flex-row md:items-start p-2 md:gap-5 text-center md:text-left`}>
                                 <a href="#"><i className="ri-user-fill text-xl font-normal text-gray-600"></i></a>
                                 <h3 className='text-base font-normal'>Profile</h3>
-                            </div>
+                            </NavLink>
 
                             <NavLink to={'signin'} className={({isActive}) => `${isActive ? "bg-gradient-to-tr from from-indigo-200 to-indigo-100 text-indigo-800 rounded-lg" : "hover:bg-indigo-50 text-gray-600 rounded-lg p-1"} flex flex-col items-center md:flex-row md:items-start p-2 md:gap-5 text-center md:text-left`}>
                                 <a href="#"><i className="ri-news-line text-xl font-normal text-red-600"></i></a>

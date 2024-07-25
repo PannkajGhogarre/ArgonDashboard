@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom'
 const Signin = () => {
     return (
         <>
-            <div className='bg-[url("./px.jpg")] bg-cover bg-no-repeat'>
+            <div className='bg-white'>
                 <nav className='md:flex justify-between items-center border border-gray-400 shadow-md rounded-lg py-2 md:mx-24 my-5 px-4'>
                     <NavLink to={'/'} className='hover:bg-slate-200 p-1 rounded-lg'>
                         <h1 className='text-base font-bold text-gray-500 text-center'>Argon Dashboard 2</h1>
@@ -15,11 +15,11 @@ const Signin = () => {
                                 <a href="#"><i className="ri-dashboard-line"></i></a>
                                 <h3>Dashboard</h3>
                             </NavLink>
-                            <NavLink to={'profie'} className='flex justify-center items-center gap-1 hover:bg-slate-200 p-1 rounded-lg'>
+                            <NavLink to={'/profile'} className='flex justify-center items-center gap-1 hover:bg-slate-200 p-1 rounded-lg'>
                                 <a href="#"><i className="ri-user-fill"></i></a>
                                 <h3>Profile</h3>
                             </NavLink>
-                            <NavLink to={'signup'} className='flex justify-center items-center gap-1 hover:bg-slate-200 p-1 rounded-lg'>
+                            <NavLink to={'/signup'} className='flex justify-center items-center gap-1 hover:bg-slate-200 p-1 rounded-lg'>
                                 <a href="#"><i className="ri-user-line border border-gray-400 rounded-full bg-gray-400"></i></a>
                                 <h3>Sign Up</h3>
                             </NavLink>
@@ -36,8 +36,8 @@ const Signin = () => {
                     </div>
                 </nav>
 
-                <div className=''>
-                    <div className='flex flex-col h-screen justify-center items-center'>
+                <div>
+                    <div className='flex flex-col h-screen justify-center items-center px-4'>
                         <div>
                             <h2 className='text-2xl font-semibold py-2'>Sign In</h2>
                             <p className='text-base font-normal text-gray-700 py-2'>Enter your email and password to sign in</p>
@@ -53,11 +53,8 @@ const Signin = () => {
                             <div className='border border-gray-400 rounded-lg items-center justify-center text-center px-32 py-2 bg-three text-xl font-medium text-white mt-5'>
                                 <button>Sign In</button>
                             </div>
-                            <p className='mt-10 text-center text-gray-700'>Don't have an account? <span className='text-three font-semibold'>Sign up</span></p>
+                            <p className='mt-10 text-center text-gray-700 mb-5'>Don't have an account? <span className='text-three font-semibold'>Sign up</span></p>
                         </div>
-                    </div>
-                    <div>
-                        {/* <img src="./px.jpg" alt="" className='w-72'/> */}
                     </div>
                 </div>
             </div>

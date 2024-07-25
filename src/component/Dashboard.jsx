@@ -53,9 +53,10 @@ const sales = [
 function Dashboard() {
     return (
         <>
-            <div className='md:flex flex-1 p-5 mt-5 gap-3 '>
-                <div className='md:w-auto h-28 box-border border-2 border-gray-400 rounded-2xl px-6 py-2 bg-white'>
-                    <div className="flex flex-1 items-center justify-between gap-14">
+
+            <div className='md:flex flex-1 p-5 mt-5 gap-3 flex-wrap'>
+                <div className='flex-1 md:w-auto md:h-auto h-28 box-border border-2 border-gray-400 rounded-2xl px-6 py-2 bg-white mb-3 md:mb-0'>
+                    <div className="flex flex-1 items-center justify-between gap-4">
                         <div>
                             <p className='text-base font-medium text-gray-500'>TODAY'S MONEY</p>
                             <h3 className='text-xl font-semibold text-black'>$53000</h3>
@@ -67,8 +68,8 @@ function Dashboard() {
                     <p className='text-base font-normal mt-5'><span className='text-green-500'>+55%</span>Since yesterday</p>
                 </div>
 
-                <div className='md:w-auto h-28 box-border border-2 border-gray-400 rounded-2xl px-6 py-2 bg-white'>
-                    <div className="flex flex-1  items-center justify-between gap-14">
+                <div className='flex-1 md:w-auto md:h-auto h-28 box-border border-2 border-gray-400 rounded-2xl px-6 py-2 bg-white mb-3 md:mb-0'>
+                    <div className="flex flex-1 items-center justify-between gap-4">
                         <div>
                             <p className='text-base font-medium text-gray-500'>TODAY'S USERS</p>
                             <h3 className='text-xl font-semibold text-black'>2,400</h3>
@@ -80,8 +81,8 @@ function Dashboard() {
                     <p className='text-base font-normal mt-5'><span className='text-green-500'>3%</span>Since Last week</p>
                 </div>
 
-                <div className='md:w-auto h-28 box-border border-2 border-gray-400 rounded-2xl px-6 py-2 bg-white'>
-                    <div className="flex flex-1  items-center justify-between gap-14">
+                <div className='flex-1 md:w-auto md:h-auto h-28 box-border border-2 border-gray-400 rounded-2xl px-6 py-2 bg-white mb-3 md:mb-0'>
+                    <div className="flex flex-1 items-center justify-between gap-4">
                         <div>
                             <p className='text-base font-medium text-gray-500'>NEW CLIENT'S</p>
                             <h3 className='text-xl font-semibold text-black'>+3,462</h3>
@@ -93,8 +94,8 @@ function Dashboard() {
                     <p className='text-base font-normal mt-5'><span className='text-red-500'>-2%</span>Since Last quarter</p>
                 </div>
 
-                <div className='md:w-auto h-28 box-border border-2 border-gray-400 rounded-2xl px-6 py-2 bg-white'>
-                    <div className="flex flex-1  items-center justify-between gap-14">
+                <div className='flex-1 md:w-auto md:h-auto h-28 box-border border-2 border-gray-400 rounded-2xl px-6 py-2 bg-white mb-3 md:mb-0'>
+                    <div className="flex flex-1 items-center justify-between gap-4">
                         <div>
                             <p className='text-base font-medium text-gray-500'>SALES</p>
                             <h3 className='text-xl font-semibold text-black'>$103,430</h3>
@@ -107,8 +108,8 @@ function Dashboard() {
                 </div>
             </div>
 
-            <div className='md:flex ml-5 gap-4'>
-                <div className='bg-[white] px-4 py-2 rounded-xl border border-gray-200 flex-1 w-full'>
+            <div className='md:flex ml-5 gap-4 flex-wrap'>
+                <div className='bg-white px-4 py-2 rounded-xl border border-gray-200 flex-1 w-full mb-3 md:mb-0'>
                     <h1 className='pt-4 text-base font-bold'>Sales by Country</h1>
                     <div className='border border-gray-200 mt-2'></div>
                     <div className='mt-5 overflow-x-auto'>
@@ -130,61 +131,62 @@ function Dashboard() {
                     </div>
                 </div>
 
-                <div className='bg-[white] px-4 py-4 rounded-xl border border-gray-200 min-w-72'>
-                    <h2 className='py-6 text-base font-bold'>Catagories</h2>
+                <div className='bg-white px-4 py-4 rounded-xl border border-gray-200 min-w-72 flex-1 mb-3 md:mb-0'>
+                    <h2 className='py-6 text-base font-bold'>Categories</h2>
                     <div className='flex justify-between py-3'>
                         <div className='flex gap-3'>
-                        <a href="">
-                            <i className="ri-smartphone-fill border-none border-gray-300 rounded-full bg-gray-600 text-white p-2 items-center justify-center"></i>
-                        </a>
-                        <div>
-                            <h2 className='text-base font-medium text-gray-600'>Devices</h2>
-                            <p className='text-sm font-normal text-gray-400'>250 in stock, <span className='text-base font-medium text-gray-500'>346+ sold</span></p>
-                        </div>
+                            <a href="">
+                                <i className="ri-smartphone-fill border-none border-gray-300 rounded-full bg-gray-600 text-white p-2 items-center justify-center"></i>
+                            </a>
+                            <div>
+                                <h2 className='text-base font-medium text-gray-600'>Devices</h2>
+                                <p className='text-sm font-normal text-gray-400'>250 in stock, <span className='text-base font-medium text-gray-500'>346+ sold</span></p>
+                            </div>
                         </div>
                         <a href="#"><i className="ri-arrow-right-s-line text-xl"></i></a>
                     </div>
 
                     <div className='flex justify-between py-3'>
                         <div className='flex gap-3'>
-                        <a href="">
-                            <i className="ri-coupon-line border-none border-gray-300 rounded-full bg-gray-600 text-white p-2 items-center justify-center"></i>
-                        </a>
-                        <div>
-                            <h2 className='text-base font-medium text-gray-600'>Ticket</h2>
-                            <p className='text-sm font-normal text-gray-400'>123 closed, <span className='text-base font-medium text-gray-500'>15 open</span></p>
-                        </div>
-                        </div>
-                        <a href="#"><i className="ri-arrow-right-s-line text-xl"></i></a>
-                    </div>
-                    
-                    <div className='flex justify-between py-3'>
-                        <div className='flex gap-3'>
-                        <a href="">
-                            <i className="ri-error-warning-line border-none border-gray-300 rounded-full bg-gray-600 text-white p-2 items-center justify-center"></i>
-                        </a>
-                        <div>
-                            <h2 className='text-base font-medium text-gray-600'>Error logs</h2>
-                            <p className='text-sm font-normal text-gray-400'>1 is active, <span className='text-base font-medium text-gray-500'>40 closed</span></p>
-                        </div>
+                            <a href="">
+                                <i className="ri-coupon-line border-none border-gray-300 rounded-full bg-gray-600 text-white p-2 items-center justify-center"></i>
+                            </a>
+                            <div>
+                                <h2 className='text-base font-medium text-gray-600'>Ticket</h2>
+                                <p className='text-sm font-normal text-gray-400'>123 closed, <span className='text-base font-medium text-gray-500'>15 open</span></p>
+                            </div>
                         </div>
                         <a href="#"><i className="ri-arrow-right-s-line text-xl"></i></a>
                     </div>
 
                     <div className='flex justify-between py-3'>
                         <div className='flex gap-3'>
-                        <a href="">
-                            <i className="ri-emotion-happy-line border-none border-gray-300 rounded-full bg-gray-600 text-white p-2 items-center justify-center"></i>
-                        </a>
-                        <div>
-                            <h2 className='text-base font-medium text-gray-600'>Happy Users</h2>
-                            <p className='text-sm font-normal text-gray-400'>+430</p>
+                            <a href="">
+                                <i className="ri-error-warning-line border-none border-gray-300 rounded-full bg-gray-600 text-white p-2 items-center justify-center"></i>
+                            </a>
+                            <div>
+                                <h2 className='text-base font-medium text-gray-600'>Error logs</h2>
+                                <p className='text-sm font-normal text-gray-400'>1 is active, <span className='text-base font-medium text-gray-500'>40 closed</span></p>
+                            </div>
                         </div>
+                        <a href="#"><i className="ri-arrow-right-s-line text-xl"></i></a>
+                    </div>
+
+                    <div className='flex justify-between py-3'>
+                        <div className='flex gap-3'>
+                            <a href="">
+                                <i className="ri-emotion-happy-line border-none border-gray-300 rounded-full bg-gray-600 text-white p-2 items-center justify-center"></i>
+                            </a>
+                            <div>
+                                <h2 className='text-base font-medium text-gray-600'>Happy Users</h2>
+                                <p className='text-sm font-normal text-gray-400'>+430</p>
+                            </div>
                         </div>
                         <a href="#"><i className="ri-arrow-right-s-line text-xl"></i></a>
                     </div>
                 </div>
             </div>
+
         </>
     )
 }
