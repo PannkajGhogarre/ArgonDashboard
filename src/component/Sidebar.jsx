@@ -6,7 +6,7 @@ const Sidebar = ({isOpen}) => {
     
   return (
     <div className='pl-5'>
-        <div className={`${isOpen ?'translate-x-0' : '-translate-x-full'}md:w-72 h-auto p-2 mt-5 border border-gray-500 rounded-l-xl bg-white`}>
+        <div className={`${isOpen ? 'hidden' : 'block'}md:w-72 h-auto p-2 mt-5 border border-gray-500 rounded-l-xl bg-white`}>
                     <div className='md:flex flex-col items-center justify-center text-center'>
                         <div className='md:flex flex-1 items-center justify-center gap-2'>
                             <div className='md:flex flex-wrap text-sm font-normal'>

@@ -10,6 +10,7 @@ export default {
         one : 'rgb(17, 205, 239)',
         two : '#007aff',
         three : 'rgb(45, 206, 137)',
+        four : 'rgb(52, 71, 103)'
       }
     },
   },

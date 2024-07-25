@@ -9,9 +9,9 @@ const Billing = () => {
       <p className=''>Notification</p>
       <p className=''>Backup</p>
     </div>
-      <div className='md:flex px-4 gap-3'>
+      <div className='md:flex px-4 justify-between gap-3'>
         <div>
-          <div className='md:flex items-center '>
+          
             <div className='md:flex items-center gap-6'>
               <div className='w-72 mx-auto'>
                 <img src="./credit-card.png" alt="card" />
@@ -31,7 +31,7 @@ const Billing = () => {
                 <h1 className='text-xl font-bold mt-5'>$455.00</h1>
               </div>
             </div>
-          </div>
+          
           
           <div className='px-4 py-3 border-none border-gray-400 rounded-xl bg-white text-center'>
             <div className='md:flex justify-between'>
@@ -120,12 +120,12 @@ const Billing = () => {
         </div>
       </div>
 
-      <div className='md:flex px-4 py-2 gap-3'>
+      <div className='md:flex px-4 py-2 justify-between gap-3'>
         <div className='px-3 py-2 mt-5 border border-gray-400 bg-white rounded-xl md:text-left text-center'>
           <h2 className='text-xl font-medium p-2'>Billing Information</h2>
 
 
-          <div className=' px-3 py-4 mt-5 border border-gray-400 bg-slate-100 rounded-lg text-center'>
+          <div className='w-full px-3 py-4 mt-5 border border-gray-400 bg-slate-100 rounded-lg text-center'>
             <div className='md:flex items-center gap-80 mb-5 py-2'>
               <h2 className='text-base font-medium'>Oliver Liam</h2>
               <div className='flex justify-center gap-5'>
@@ -153,7 +153,7 @@ const Billing = () => {
             </div>
           </div>
 
-          <div className=' px-3 py-4 mt-5 border border-gray-400 bg-slate-100 rounded-lg text-center'>
+          <div className='w-full px-3 py-4 mt-5 border border-gray-400 bg-slate-100 rounded-lg text-center'>
             <div className='md:flex items-center gap-80 mb-5 py-2'>
               <h2 className='text-base font-medium'>Lucas Harper</h2>
               <div className='flex justify-center gap-5'>
@@ -181,7 +181,7 @@ const Billing = () => {
             </div>
           </div>
 
-          <div className=' px-3 py-4 mt-5 border border-gray-400 bg-slate-100 rounded-lg text-center'>
+          <div className='w-full px-3 py-4 mt-5 border border-gray-400 bg-slate-100 rounded-lg text-center'>
             <div className='md:flex items-center gap-80 mb-5 py-2'>
               <h2 className='text-base font-medium'>Lucas Harper</h2>
               <div className='flex justify-center gap-5'>
@@ -210,7 +210,7 @@ const Billing = () => {
           </div>
         </div>
 
-        <div className='px-3 py-4 mt-5 border border-gray-400 bg-white rounded-xl md:text-left text-center'>
+        <div className='w-full px-3 py-4 mt-5 border border-gray-400 bg-white rounded-xl md:text-left text-center'>
           <div className='md:flex gap-52'>
             <h3 className='text-base font-medium'>Your Transaction's</h3>
             <div className='flex gap-2 items-center justify-center'>
