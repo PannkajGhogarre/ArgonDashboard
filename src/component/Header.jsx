@@ -93,10 +93,10 @@ const Header = ({toggleMenu,isOpen}) => {
                             <a href="#"><i className="ri-search-line"></i></a>
                             <input type="text" className='border-none outline-none' placeholder='Type Here...'/>
                         </div>
-                        <div className='flex justify-center gap-1'>
+                        <NavLink to={'signin'} className='flex justify-center gap-1'>
                             <a href="#"><i className="ri-user-fill border border-gray-500 rounded-full text-blue-400 bg-white"></i></a>
                             <h3 className='text-white font-normal'>sign-In</h3>
-                        </div>
+                        </NavLink>
                         <a href="#"><i className="ri-settings-3-line text-white font-normal"></i></a>
                         <a href="#"><i className="ri-notification-4-line text-white font-normal"></i></a>
                     </div>

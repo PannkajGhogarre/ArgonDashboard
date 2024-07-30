@@ -5,8 +5,8 @@ const Sidebar = ({isOpen}) => {
 
     
   return (
-    <div className='pl-5'>
-        <div className={`${isOpen ? 'hidden' : 'block'}md:w-72 h-auto p-2 mt-5 border border-gray-500 rounded-l-xl bg-white`}>
+    <div className='md:pl-5'>
+        <div className={`${isOpen ? 'hidden' : 'block'} md:w-72 h-auto max-h-screen overflow-y-auto p-2 md:mt-5 border-none border-gray-500 md:rounded-l-xl bg-white`}>
                     <div className='md:flex flex-col items-center justify-center text-center'>
                         <div className='md:flex flex-1 items-center justify-center gap-2'>
                             <div className='md:flex flex-wrap text-sm font-normal'>
@@ -14,7 +14,7 @@ const Sidebar = ({isOpen}) => {
                                 <a href="#"><i className="ri-arrow-up-s-line border-2 border-black"></i></a>
                                 <a href="#"><i className="ri-arrow-down-s-line border-2 border-black"></i></a>
                             </div>
-                            <h1 className='text-base font-semibold'>Argon Dashboard 2 PRO</h1>
+                            <h1 className='md:text-base text-xl font-semibold'>Argon Dashboard 2 PRO</h1>
                         </div>
                     </div>
 

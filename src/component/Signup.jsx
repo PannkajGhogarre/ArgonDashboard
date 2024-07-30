@@ -92,10 +92,10 @@ const Signup = () => {
     //             </div>
     //         </div>
 
-    <div className='bg-[url("./city.jpg")] w-auto h-96 md:h-96 rounded-xl mx-2 my-2 bg-center bg-no-repeat bg-cover'>
+    <div className='bg-[url("./city.jpg")] w-auto h-96 md:h-96 bg-center bg-no-repeat bg-cover'>
     <nav className='md:flex justify-between items-center py-5 md:mx-24 my-5 px-4'>
         <NavLink to={'/'} className='hover:bg-slate-200 p-1 rounded-lg'>
-            <h1 className='text-base font-bold text-white text-center'>Argon Dashboard 2</h1>
+            <h1 className='text-base font-bold text-four text-center'>Argon Dashboard 2</h1>
         </NavLink>
         <div className=''>
             <ul className='md:flex gap-5'>

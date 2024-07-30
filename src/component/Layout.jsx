@@ -15,7 +15,7 @@ const Layout = () => {
   return (
     <div className='md:flex flex-row w-auto h-auto overflow-hidden'>
       <div><Sidebar isOpen={isOpen}/></div>
-      <div className='px-5 w-full'>
+      <div className='px-5 w-full max-h-screen overflow-y-auto'>
       <Header toggleMenu={toggleMenu}/>
       <Outlet />
       <Footer/>

@@ -80,7 +80,7 @@ const Profile = () => {
                     </div>
                 </div>
 
-                <div className='w-full box-border border-gray-400 rounded-xl p-4 mt-5 bg-white'>
+                <div className='w-full box-border border-gray-400 rounded-xl p-4 mt-5 bg-white overflow-auto'>
                     <h2 className='text-base font-bold text-four'>Conversations</h2>
                     <div className='flex justify-between mt-10'>
                         <div className='flex items-center justify-center gap-4'>
@@ -134,6 +134,44 @@ const Profile = () => {
                     </div>
                 </div>
 
+            </div>
+
+            <div className='mt-5 border-none border-gray-200 rounded-xl p-4 bg-white md:text-left text-center'>
+                <h2 className='text-base font-medium text-four'>Projects</h2>
+                <h3 className='text-sm font-medium text-four mt-5'>Architects design houses</h3>
+                <div className='md:flex mt-5 justify-between'>
+                    <div className='w-64 items-center justify-center mt-5'>
+                        <img src="./1.jpg" alt="" className='w-64 h-36 rounded-xl'/>
+                        <h3 className='text-base font-normal text-four mt-3'>project #2</h3>
+                        <h1 className='text-xl font-medium text-four mt-3'>Modern</h1>
+                        <p className='text-base font-normal text-four mt-3'>As Uber works through a huge amount of internal management turmoil.</p>
+                        <div className='mt-5'>
+                        <button className='border border-one rounded-lg px-6 py-1 text-sm text-center items-center bg-white justify-center text-one font-semibold'>View Project</button>
+                        </div>
+                    </div>
+                    <div className='w-64 items-center justify-center mt-5'>
+                        <img src="./2.jpg" alt="" className='w-64 h-36 rounded-xl'/>
+                        <h3 className='text-base font-normal text-four mt-3'>project #1</h3>
+                        <h1 className='text-xl font-medium text-four mt-3'>scandinavian</h1>
+                        <p className='text-base font-normal text-four mt-3'>Music is something that every person has his or her own specific opinion about..</p>
+                        <div className='mt-5'>
+                        <button className='border border-one rounded-lg px-6 py-1 text-sm text-center items-center bg-white justify-center text-one font-semibold'>View Project</button>
+                        </div>
+                    </div>
+                    <div className='w-64 items-center justify-center mt-5'>
+                        <img src="./3.jpg" alt="" className='w-64 h-36 rounded-xl'/>
+                        <h3 className='text-base font-normal text-four mt-3'>project #3</h3>
+                        <h1 className='text-xl font-medium text-four mt-3'>minimalist</h1>
+                        <p className='text-base font-normal text-four mt-3'>Different people have different taste, and various types of music.</p>
+                        <div className='mt-5'>
+                        <button className='border border-one rounded-lg px-6 py-1 text-sm text-center items-center bg-white justify-center text-one font-semibold'>View Project</button>
+                        </div>
+                    </div>
+                    <div className='flex flex-col w-64 h-auto items-center justify-center mt-5 text-center border border-gray-400 rounded-xl p-4'>
+                        <a href="#"><i className="ri-add-large-line text-xl font-bold text-gray-400"></i></a>
+                        <h1 className='text-2xl font-bold text-gray-400 mt-3'>New project</h1>
+                    </div>
+                </div>
             </div>
         </div>
     )

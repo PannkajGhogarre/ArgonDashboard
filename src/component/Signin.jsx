@@ -36,8 +36,8 @@ const Signin = () => {
                     </div>
                 </nav>
 
-                <div className='w-full h-screen flex items-start'>
-                    <div className='flex flex-col w-1/2 h-screen justify-center items-center px-4'>
+                <div className='w-full h-screen md:flex items-start'>
+                    <div className='flex flex-col md:w-1/2 h-screen justify-center items-center px-4'>
                         <div>
                             <h2 className='text-2xl font-semibold py-2'>Sign In</h2>
                             <p className='text-base font-normal text-gray-700 py-2'>Enter your email and password to sign in</p>
@@ -56,7 +56,7 @@ const Signin = () => {
                             <p className='mt-10 text-center text-gray-700 mb-5'>Don't have an account? <span className='text-three font-semibold'>Sign up</span></p>
                         </div>
                     </div>
-                    <div className='relative w-1/2 h-full'>
+                    <div className='md:relative w-1/2 h-full'>
                         <img src="./px.jpg" alt="" className='w-full h-full object-cover rounded-xl' />
                     </div>
                 </div>
