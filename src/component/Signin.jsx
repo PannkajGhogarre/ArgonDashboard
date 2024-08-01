@@ -56,7 +56,7 @@ const Signin = () => {
                             <p className='mt-10 text-center text-gray-700 mb-5'>Don't have an account? <span className='text-three font-semibold'>Sign up</span></p>
                         </div>
                     </div>
-                    <div className='md:relative w-1/2 h-full'>
+                    <div className='md:relative w-1/2 h-full hidden md:block'>
                         <img src="./px.jpg" alt="" className='w-full h-full object-cover rounded-xl' />
                     </div>
                 </div>

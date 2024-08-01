@@ -19,6 +19,11 @@ const Layout = () => {
       <Header toggleMenu={toggleMenu}/>
       <Outlet />
       <Footer/>
+      <div className="fixed right-8 bottom-10 flex justify-center items-center px-4">
+                        <button className="font-extrabold text-2xl bg-gray-300 rounded-full px-4 py-3">
+                            <a href="#"><i className="ri-settings-3-fill"></i></a>
+                        </button>
+                    </div>
       </div>
     </div>
   )

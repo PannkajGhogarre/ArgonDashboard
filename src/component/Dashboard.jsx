@@ -1,6 +1,41 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import { Line } from 'react-chartjs-2';
+import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend } from 'chart.js';
 
+ChartJS.register(
+    CategoryScale,
+    LinearScale,
+    PointElement,
+    LineElement,
+    Title,
+    Tooltip,
+    Legend
+);
+const data = {
+    labels: ['Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+    datasets: [
+        {
+            label: 'Dataset 1',
+            data: [0, 50, 300, 200, 500, 250, 400, 200, 500, 500],
+            borderColor: 'rgba(75, 192, 192, 1)',
+            backgroundColor: 'rgba(75, 192, 192, 0.2)',
+            fill: true,
+        },
+    ],
+};
 
+const options = {
+    responsive: true,
+    plugins: {
+        legend: {
+            position: 'top',
+        },
+        title: {
+            display: true,
+            text: 'Chart Overview',
+        },
+    },
+};
 
 const sales = [
     {
@@ -49,8 +84,23 @@ const sales = [
     },
 ]
 
+const images = [
+    "https://wallpapercave.com/wp/wp3386769.jpg",
+    "https://images.unsplash.com/photo-1721633617180-97c67428a48e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D.jpg",
+    "https://plus.unsplash.com/premium_photo-1720823182783-3b9fb27e40d9?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D.jpg"
+];
+
 
 function Dashboard() {
+    const [currentIndex, setCurrentIndex] = useState(0);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+        }, 3000); // Change image every 3 seconds
+        return () => clearInterval(interval);
+    }, []);
+
     return (
         <>
 
@@ -108,7 +158,41 @@ function Dashboard() {
                 </div>
             </div>
 
-            <div className='md:flex ml-5 gap-4 flex-wrap'>
+            <div className='md:flex flex-1 gap-5 ml-5'>
+                <div className="w-full max-w-4xl mx-auto mt-10 p-4 bg-white shadow-md rounded-xl border-none">
+                    <Line data={data} options={options} />
+                </div>
+
+                <div className="relative w-full max-w-4xl mx-auto overflow-hidden rounded-xl shadow-lg mt-10">
+                    <div className="h-56">
+                        {images.map((image, index) => (
+                            <div
+                                key={index}
+                                className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${index === currentIndex ? 'opacity-100' : 'opacity-0'}`}
+                            >
+                                <img src={image} alt={`Slide ${index}`} className="w-full h-full object-cover" />
+                            </div>
+                        ))}
+                    </div>
+                    <div className="absolute right-1 top-5 flex gap-8 items-center px-4">
+                        <button
+                            className="font-extrabold text-2xl text-white"
+                            onClick={() => setCurrentIndex((currentIndex - 1 + images.length) % images.length)}
+                        >
+                            <a href="#"><i className="ri-arrow-left-s-line"></i></a>
+                        </button>
+                        <button
+                            className="font-extrabold text-2xl text-white"
+                            onClick={() => setCurrentIndex((currentIndex + 1) % images.length)}
+                        >
+                            <a href="#"><i className="ri-arrow-right-s-line"></i></a>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div className='md:flex ml-5 gap-4 flex-wrap mt-10'>
                 <div className='bg-white px-4 py-2 rounded-xl border border-gray-200 flex-1 w-full mb-3 md:mb-0'>
                     <h1 className='pt-4 text-base font-bold'>Sales by Country</h1>
                     <div className='border border-gray-200 mt-2'></div>

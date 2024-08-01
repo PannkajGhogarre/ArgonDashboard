@@ -9,7 +9,7 @@ const Billing = () => {
         <p className=''>Notification</p>
         <p className=''>Backup</p>
       </div>
-      {/* <div className='md:flex px-4 justify-between gap-3'>
+       {/* <div className='md:flex px-4 justify-between gap-3'>
         <div>
           
             <div className='md:flex items-center gap-6'>
@@ -44,14 +44,14 @@ const Billing = () => {
                   <img src="./business.png" alt="money" className='w-14 mx-auto' />
                   <p className='text-base font-medium'>*** **** *** 7852</p>
                 </div>
-                <a href="#"><i class="ri-pencil-fill"></i></a>
+                <a href="#"><i className-pencil-fill"></i></a>
               </div>
               <div className='flex items-center gap-20 border border-gray-400 rounded-xl bg-white px-5 py-3'>
                 <div className='flex items-center gap-3'>
                   <img src="./visa.png" alt="visa" className='w-10 mx-auto' />
                   <p className='text-base font-medium'>*** **** *** 5248</p>
                 </div>
-                <a href="#"><i class="ri-pencil-fill"></i></a>
+                <a href="#"><i className-pencil-fill"></i></a>
               </div>
             </div>
           </div>

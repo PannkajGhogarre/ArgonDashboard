@@ -3,7 +3,7 @@ import React from 'react'
 const Profile = () => {
     return (
         <div className='mx-auto p-4'>
-            <div className='md:flex items-center justify-between md:mt-28 border-none border-gray-400 rounded-xl shadow-md p-4 bg-white'>
+            <div className='md:flex items-center md:justify-between md:mt-28 border-none border-gray-400 rounded-xl shadow-md p-4 bg-white'>
                 <div className='flex items-center justify-center gap-5'>
                     <img src="./icons.png" alt="" className=' w-20 border border-gray-300 rounded-lg p-1' />
                     <div className='items-center justify-center'>
@@ -11,7 +11,7 @@ const Profile = () => {
                         <p className='text-base font-normal'>CEO / Co-Founder</p>
                     </div>
                 </div>
-                <div className='flex items-center justify-center gap-10 border-none border-gray-400 rounded-lg p-3 bg-gray-100'>
+                <div className='flex flex-wrap items-center justify-center md:gap-10 gap-5 border-none border-gray-400 rounded-lg p-3 bg-gray-100'>
                     <div className='flex gap-1'>
                         <a href="#"><i className="ri-apps-fill font-normal text-gray-600"></i></a>
                         <h3 className='font-normal text-gray-600'>App</h3>
@@ -27,7 +27,7 @@ const Profile = () => {
                 </div>
             </div>
 
-            <div className='md:flex mt-5 justify-between gap-5'>
+            <div className='md:flex mt-5 justify-between gap-1'>
                 <div className='w-full box-border border-gray-400 rounded-xl p-4 mt-5 bg-white'>
                     <h2 className='text-base font-bold text-four'>Platform Settings</h2>
                     <div className='mt-5'>
@@ -80,7 +80,7 @@ const Profile = () => {
                     </div>
                 </div>
 
-                <div className='w-full box-border border-gray-400 rounded-xl p-4 mt-5 bg-white overflow-auto'>
+                <div className='w-full box-border border-gray-400 rounded-xl p-4 mt-5 bg-white'>
                     <h2 className='text-base font-bold text-four'>Conversations</h2>
                     <div className='flex justify-between mt-10'>
                         <div className='flex items-center justify-center gap-4'>
@@ -139,8 +139,8 @@ const Profile = () => {
             <div className='mt-5 border-none border-gray-200 rounded-xl p-4 bg-white md:text-left text-center'>
                 <h2 className='text-base font-medium text-four'>Projects</h2>
                 <h3 className='text-sm font-medium text-four mt-5'>Architects design houses</h3>
-                <div className='md:flex mt-5 justify-between'>
-                    <div className='w-64 items-center justify-center mt-5'>
+                <div className='md:flex flex-wrap mt-5 justify-between text-center mx-auto'>
+                    <div className='w-64 items-center justify-center mt-5 mx-auto'>
                         <img src="./1.jpg" alt="" className='w-64 h-36 rounded-xl'/>
                         <h3 className='text-base font-normal text-four mt-3'>project #2</h3>
                         <h1 className='text-xl font-medium text-four mt-3'>Modern</h1>
@@ -149,7 +149,7 @@ const Profile = () => {
                         <button className='border border-one rounded-lg px-6 py-1 text-sm text-center items-center bg-white justify-center text-one font-semibold'>View Project</button>
                         </div>
                     </div>
-                    <div className='w-64 items-center justify-center mt-5'>
+                    <div className='w-64 items-center justify-center mt-5 mx-auto'>
                         <img src="./2.jpg" alt="" className='w-64 h-36 rounded-xl'/>
                         <h3 className='text-base font-normal text-four mt-3'>project #1</h3>
                         <h1 className='text-xl font-medium text-four mt-3'>scandinavian</h1>
@@ -158,7 +158,7 @@ const Profile = () => {
                         <button className='border border-one rounded-lg px-6 py-1 text-sm text-center items-center bg-white justify-center text-one font-semibold'>View Project</button>
                         </div>
                     </div>
-                    <div className='w-64 items-center justify-center mt-5'>
+                    <div className='w-64 items-center justify-center mt-5 mx-auto'>
                         <img src="./3.jpg" alt="" className='w-64 h-36 rounded-xl'/>
                         <h3 className='text-base font-normal text-four mt-3'>project #3</h3>
                         <h1 className='text-xl font-medium text-four mt-3'>minimalist</h1>
@@ -167,7 +167,7 @@ const Profile = () => {
                         <button className='border border-one rounded-lg px-6 py-1 text-sm text-center items-center bg-white justify-center text-one font-semibold'>View Project</button>
                         </div>
                     </div>
-                    <div className='flex flex-col w-64 h-auto items-center justify-center mt-5 text-center border border-gray-400 rounded-xl p-4'>
+                    <div className='flex flex-col w-64 h-auto items-center justify-center mt-5 text-center border border-gray-400 rounded-xl p-4 mx-auto'>
                         <a href="#"><i className="ri-add-large-line text-xl font-bold text-gray-400"></i></a>
                         <h1 className='text-2xl font-bold text-gray-400 mt-3'>New project</h1>
                     </div>

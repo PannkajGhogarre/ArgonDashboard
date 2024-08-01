@@ -6,7 +6,8 @@ const Sidebar = ({isOpen}) => {
     
   return (
     <div className='md:pl-5'>
-        <div className={`${isOpen ? 'hidden' : 'block'} md:w-72 h-auto max-h-screen overflow-y-auto p-2 md:mt-5 border-none border-gray-500 md:rounded-l-xl bg-white`}>
+         <div className={`min-h-screen ${
+          isOpen ? "md:w-16" : "w-72"} duration-500 ease-in-out md:w-72 h-auto max-h-screen overflow-y-auto p-2 md:mt-5 border-none border-gray-500 md:rounded-l-xl bg-white`}>
                     <div className='md:flex flex-col items-center justify-center text-center'>
                         <div className='md:flex flex-1 items-center justify-center gap-2'>
                             <div className='md:flex flex-wrap text-sm font-normal'>
@@ -81,6 +82,58 @@ const Sidebar = ({isOpen}) => {
                 </div>
     </div>
   )
+// const Menus = [
+//     { title: "dashboard", src: "dashboard" },
+//     { title: "Tables", src: "cells" },
+//     { title: "Billing", src: "bill"},
+//     { title: "Virtual Reality ", src: "computer" },
+//     { title: "Rtl", src: "global" },
+//     { title: "Profile", src: "user", gap: true},
+//     { title: "Sign-in", src: "log-in"},
+//     { title: "Sign-up", src: "writing" },
+//   ];
+
+//   return (
+//     <div className="flex">
+//       <div
+//         className={` ${
+//           isOpen ? "w-24" : "w-16 "
+//         } bg-dark-purple h-screen p-5  pt-8 relative duration-300`}
+//       >
+//         <div className="flex gap-x-4 items-center">
+//           <img
+//             src="./src/assets/logo.png"
+//             className={`cursor-pointer duration-500 ${
+//               isOpen && "rotate-[360deg]"
+//             }`}
+//           />
+//           <h1
+//             className={`text-white origin-left font-medium text-xl duration-200 ${
+//               !isOpen && "scale-0"
+//             }`}
+//           >
+//             Argon Dashboard
+//           </h1>
+//         </div>
+//         <ul className="pt-6">
+//           {Menus.map((Menu, index) => (
+//             <li
+//               key={index}
+//               className={`flex  rounded-md p-2 cursor-pointer hover:bg-light-white text-gray-300 text-sm items-center gap-x-4 
+//               ${Menu.gap ? "mt-9" : "mt-2"} ${
+//                 index === 0 && "bg-light-white"
+//               } `}
+//             >
+//               <img src={`./src/assets/${Menu.src}.png`} />
+//               <span className={`${!isOpen && "hidden"} origin-left duration-200 text-xl`}>
+//                 {Menu.title}
+//               </span>
+//             </li>
+//           ))}
+//         </ul>
+//       </div>
+//     </div>
+//   );
 }
 
 export default Sidebar
