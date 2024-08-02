@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect,useRef } from 'react'
 import { Line } from 'react-chartjs-2';
 import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend } from 'chart.js';
 
@@ -93,13 +93,20 @@ const images = [
 
 function Dashboard() {
     const [currentIndex, setCurrentIndex] = useState(0);
+  const sliderRef = useRef();
 
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-        }, 3000); // Change image every 3 seconds
-        return () => clearInterval(interval);
-    }, []);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  useEffect(() => {
+    sliderRef.current.style.transition = 'transform 0.5s ease-in-out';
+    sliderRef.current.style.transform = `translateX(-${currentIndex * 100}%)`;
+  }, [currentIndex]);
 
     return (
         <>
@@ -164,16 +171,16 @@ function Dashboard() {
                 </div>
 
                 <div className="relative w-full max-w-4xl mx-auto overflow-hidden rounded-xl shadow-lg mt-10">
-                    <div className="h-56">
-                        {images.map((image, index) => (
-                            <div
-                                key={index}
-                                className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${index === currentIndex ? 'opacity-100' : 'opacity-0'}`}
-                            >
-                                <img src={image} alt={`Slide ${index}`} className="w-full h-full object-cover" />
-                            </div>
-                        ))}
-                    </div>
+                <div
+        className="flex w-full md:h-[50vh]"
+        ref={sliderRef}
+      >
+        {images.map((image, index) => (
+          <div key={index} className="w-full flex-shrink-0">
+            <img src={image} alt={`Slide ${index}`} className="w-full h-full object-cover" />
+          </div>
+        ))}
+      </div>
                     <div className="absolute right-1 top-5 flex gap-8 items-center px-4">
                         <button
                             className="font-extrabold text-2xl text-white"
