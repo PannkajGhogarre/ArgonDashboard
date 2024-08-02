@@ -99,40 +99,39 @@ const Sidebar = ({ isOpen }) => {
     return (
         <div className="flex md:pl-5">
             <div className={` ${isOpen ? "md:w-64 w-full" : "md:w-20"} duration-300 h-auto max-h-screen overflow-y-auto p-2 md:mt-5 border-none border-gray-500 md:rounded-l-xl bg-white mx-auto`} >
-                <div className="flex gap-x-4 items-center">
-                    <img src="./image/download.png" className={`cursor-pointer duration-500 w-10`} />
-                    <h1 className={`text-four origin-left font-medium text-xl duration-200 ${!isOpen && "scale-0"}`}>
+                <div className="flex gap-x-2 items-center px-2">
+                    <img src="./image/download.png" className={`cursor-pointer duration-500 w-8`} />
+                    <h1 className={`text-four origin-left font-medium text-base duration-200 ${!isOpen && "scale-0"}`} >
                         Argon Dashboard
                     </h1>
                 </div>
                 <hr className='mt-5 shadow-sm' />
                 <div>
-                    <ul className="pt-6">
-                        {Menus.map((Menu, index) => (
-                            <NavLink to={Menu.link} key={index} className={({ isActive }) => `${isActive ? "bg-gradient-to-tr from      from-indigo-200 to-indigo-100 text-indigo-800 rounded-lg" : "hover:bg-indigo-50 text-gray-600 rounded-lg p-1"} flex rounded-md p-2 cursor-pointer text-sm items-center gap-x-4  ${Menu.gap ? "mt-9" : "mt-2"} ${index === 0 && "bg-light-white"} `} >
-                                <img src={`./image/${Menu.src}.png`} className='w-5' />
-                                <span className={`${!isOpen && "hidden"} origin-left duration-200 text-base font-medium text-four`}>
-                                    {Menu.title}
-                                </span>
-                            </NavLink>
-
-                        ))}
-                    </ul>
-
-                    <h1 className={`text-four origin-left font-medium text-xl duration-200 text-center mt-5 ${!isOpen && "scale-0"}`}>Account Pages   
-                    </h1>
-                    <ul className="mt-2">
-                        {Menus1.map((Menu, index) => (
+                <ul className="pt-6">
+                    {Menus.map((Menu, index) => (
                             <NavLink to={Menu.link} key={index} className={({ isActive }) => `${isActive ? "bg-gradient-to-tr from from-indigo-200 to-indigo-100 text-indigo-800 rounded-lg" : "hover:bg-indigo-50 text-gray-600 rounded-lg p-1"} flex rounded-md p-2 cursor-pointer text-sm items-center gap-x-4  ${Menu.gap ? "mt-9" : "mt-2"} ${index === 0 && "bg-light-white"} `} >
                                 <img src={`./image/${Menu.src}.png`} className='w-5' />
                                 <span className={`${!isOpen && "hidden"} origin-left duration-200 text-base font-medium text-four`}>
                                     {Menu.title}
                                 </span>
+                        </NavLink>
 
-                            </NavLink>
+                    ))}
+                </ul>
 
-                        ))}
-                    </ul>
+                <h1 className={`text-four origin-left font-medium text-base duration-200 text-center mt-5 ${!isOpen && "scale-0"}`}>Account Pages</h1>
+                <ul className="mt-2">
+                    {Menus1.map((Menu, index) => (
+                        <NavLink to={Menu.link} key={index} className={({ isActive }) => `${isActive ? "bg-gradient-to-tr from from-indigo-200 to-indigo-100 text-indigo-800 rounded-lg" : "hover:bg-indigo-50 text-gray-600 rounded-lg p-1"} flex rounded-md p-2 cursor-pointer text-sm items-center gap-x-4  ${Menu.gap ? "mt-9" : "mt-2"} ${index === 0 && "bg-light-white"} `} >
+                                <img src={`./image/${Menu.src}.png`} className='w-5' />
+                                <span className={`${!isOpen && "hidden"} origin-left duration-200 text-base font-medium text-four`}>
+                                    {Menu.title}
+                                </span>
+    
+                        </NavLink>
+
+                    ))}
+                </ul>
                 </div>
 
                 <div className={`items-center justify-center text-center py-5 ${!isOpen && 'scale-0'}`}>
