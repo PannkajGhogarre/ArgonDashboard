@@ -3,7 +3,7 @@ import React from 'react'
 const Billing = () => {
   return (
     <>
-      <div className='md:flex gap-4 border border-gray-400 rounded-xl bg-white w-80 px-5 py-2 ml-4 mt-5 text-center'>
+      <div data-aos='fade-up-left' data-aos-delay='800' className='md:flex gap-4 border border-gray-400 rounded-xl bg-white w-80 px-5 py-2 ml-4 mt-5 text-center'>
         <p className=''>Massage</p>
         <p className=''>Social</p>
         <p className=''>Notification</p>
@@ -294,7 +294,7 @@ const Billing = () => {
 
       <div className='md:flex px-4 justify-between gap-3'>
         <div>
-          <div className='md:flex items-center gap-6'>
+          <div data-aos='fade-up-left' data-aos-delay='800' className='md:flex items-center gap-6'>
             <div className='w-72 mx-auto'>
               <img src="./credit-card.png" alt="card" />
             </div>
@@ -313,7 +313,7 @@ const Billing = () => {
               <h1 className='text-xl font-bold mt-5'>$455.00</h1>
             </div>
           </div>
-          <div className='px-4 py-3 border-none border-gray-400 rounded-xl bg-white text-center'>
+          <div data-aos='fade-down-left' data-aos-delay='800' className='px-4 py-3 border-none border-gray-400 rounded-xl bg-white text-center'>
             <div className='md:flex justify-between'>
               <h1 className='text-base font-medium text-gray-700'>Payment Method</h1>
               <button className='border border-gray-400 rounded-xl px-4 py-2 bg-gray-800 text-white'>+Add New Card</button>
@@ -336,7 +336,7 @@ const Billing = () => {
             </div>
           </div>
         </div>
-        <div className='px-4 py-2 border-none border-gray-400 bg-white rounded-xl mt-10'>
+        <div data-aos='fade-up-right' data-aos-delay='800' className='px-4 py-2 border-none border-gray-400 bg-white rounded-xl mt-10'>
           <div className='md:flex gap-60 mt-3 md:text-left text-center'>
             <h2 className='text-base font-medium'>Invoices</h2>
             <button className='border border-gray-400 rounded-xl bg-white text-cyan-400 px-6 py-1 text-sm'>View All</button>

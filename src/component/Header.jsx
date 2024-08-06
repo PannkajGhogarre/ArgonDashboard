@@ -89,7 +89,7 @@ const Header = ({toggleMenu,isOpen}) => {
                         </div>
                     </div>
                     <div className='flex justify-center gap-4 pt-5'>
-                        <div className='md:w-56 h-8 flex items-center gap-2 border-none border-gray-500 px-1 py-1 bg-white rounded-xl'>
+                        <div className='md:w-56 h-8 flex items-center gap-2 border-none border-gray-500 px-1 py-2 bg-white rounded-xl'>
                             <a href="#"><i className="ri-search-line"></i></a>
                             <input type="text" className='border-none outline-none' placeholder='Type Here...'/>
                         </div>

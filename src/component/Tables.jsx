@@ -126,7 +126,7 @@ const project = [
 const Tables = () => {
   return (
     <div className='p-5'>
-      <div className='bg-[white] px-4 py-5 rounded-xl border-none border-gray-200 flex-1'>
+      <div data-aos='fade-left' data-aos-delay='800' className='bg-[white] px-4 py-5 rounded-xl border-none border-gray-200 flex-1'>
         <h1 className='pt-4 text-base font-bold'>Authors table</h1>
         <div className='border border-gray-200 mt-2'></div>
         <div className='mt-5 overflow-x-auto'>

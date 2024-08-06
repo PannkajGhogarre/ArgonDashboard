@@ -3,7 +3,7 @@ import React from 'react'
 const Profile = () => {
     return (
         <div className='mx-auto p-4'>
-            <div className='md:flex items-center md:justify-between md:mt-28 border-none border-gray-400 rounded-xl shadow-md p-4 bg-white'>
+            <div data-aos='fade-down-right' data-aos-delay='800' className='md:flex items-center md:justify-between md:mt-28 border-none border-gray-400 rounded-xl shadow-md p-4 bg-white'>
                 <div className='flex items-center justify-center gap-5'>
                     <img src="./icons.png" alt="" className=' w-20 border border-gray-300 rounded-lg p-1' />
                     <div className='items-center justify-center'>
@@ -28,7 +28,7 @@ const Profile = () => {
             </div>
 
             <div className='md:flex mt-5 justify-between gap-1'>
-                <div className='w-full box-border border-gray-400 rounded-xl p-4 mt-5 bg-white'>
+                <div data-aos='fade-up-right' data-aos-delay='800' className='w-full box-border border-gray-400 rounded-xl p-4 mt-5 bg-white'>
                     <h2 className='text-base font-bold text-four'>Platform Settings</h2>
                     <div className='mt-5'>
                         <h2 className='mt-5 text-base font-medium text-gray-700'>ACCOUNT</h2>
@@ -61,7 +61,7 @@ const Profile = () => {
                     </div>
                 </div>
 
-                <div className='w-full box-border border-gray-400 rounded-xl p-4 mt-5 bg-white'>
+                <div data-aos='fade-down-left' data-aos-delay='800' className='w-full box-border border-gray-400 rounded-xl p-4 mt-5 bg-white'>
                     <div className='flex justify-between'>
                         <h2 className='text-base font-bold text-four'>Profile Information</h2>
                         <a href="#"><i className="ri-pencil-line"></i></a>
@@ -80,7 +80,7 @@ const Profile = () => {
                     </div>
                 </div>
 
-                <div className='w-full box-border border-gray-400 rounded-xl p-4 mt-5 bg-white'>
+                <div data-aos='fade-up-left' data-aos-delay='800' className='w-full box-border border-gray-400 rounded-xl p-4 mt-5 bg-white'>
                     <h2 className='text-base font-bold text-four'>Conversations</h2>
                     <div className='flex justify-between mt-10'>
                         <div className='flex items-center justify-center gap-4'>

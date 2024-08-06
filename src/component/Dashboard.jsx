@@ -1,4 +1,4 @@
-import React, { useState, useEffect,useRef } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { Line } from 'react-chartjs-2';
 import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend } from 'chart.js';
 
@@ -93,26 +93,26 @@ const images = [
 
 function Dashboard() {
     const [currentIndex, setCurrentIndex] = useState(0);
-  const sliderRef = useRef();
+    const sliderRef = useRef();
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 3000);
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+        }, 3000);
 
-    return () => clearInterval(interval);
-  }, []);
+        return () => clearInterval(interval);
+    }, []);
 
-  useEffect(() => {
-    sliderRef.current.style.transition = 'transform 0.5s ease-in-out';
-    sliderRef.current.style.transform = `translateX(-${currentIndex * 100}%)`;
-  }, [currentIndex]);
+    useEffect(() => {
+        sliderRef.current.style.transition = 'transform 0.5s ease-in-out';
+        sliderRef.current.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }, [currentIndex]);
 
     return (
         <>
 
             <div className='md:flex flex-1 p-5 mt-5 gap-3 flex-wrap'>
-                <div className='flex-1 md:w-auto md:h-auto h-28 box-border border-2 border-gray-400 rounded-2xl px-6 py-2 bg-white mb-3 md:mb-0'>
+                <div data-aos='fade-up' data-aos-delay='1000' className='flex-1 md:w-auto md:h-auto h-28 box-border border-2 border-gray-400 rounded-2xl px-6 py-2 bg-white mb-3 md:mb-0'>
                     <div className="flex flex-1 items-center justify-between gap-4">
                         <div>
                             <p className='text-base font-medium text-gray-500'>TODAY'S MONEY</p>
@@ -125,7 +125,7 @@ function Dashboard() {
                     <p className='text-base font-normal mt-5'><span className='text-green-500'>+55%</span>Since yesterday</p>
                 </div>
 
-                <div className='flex-1 md:w-auto md:h-auto h-28 box-border border-2 border-gray-400 rounded-2xl px-6 py-2 bg-white mb-3 md:mb-0'>
+                <div data-aos='fade-down' data-aos-delay='1000' className='flex-1 md:w-auto md:h-auto h-28 box-border border-2 border-gray-400 rounded-2xl px-6 py-2 bg-white mb-3 md:mb-0'>
                     <div className="flex flex-1 items-center justify-between gap-4">
                         <div>
                             <p className='text-base font-medium text-gray-500'>TODAY'S USERS</p>
@@ -138,7 +138,7 @@ function Dashboard() {
                     <p className='text-base font-normal mt-5'><span className='text-green-500'>3%</span>Since Last week</p>
                 </div>
 
-                <div className='flex-1 md:w-auto md:h-auto h-28 box-border border-2 border-gray-400 rounded-2xl px-6 py-2 bg-white mb-3 md:mb-0'>
+                <div data-aos='fade-up' data-aos-delay='1000' className='flex-1 md:w-auto md:h-auto h-28 box-border border-2 border-gray-400 rounded-2xl px-6 py-2 bg-white mb-3 md:mb-0'>
                     <div className="flex flex-1 items-center justify-between gap-4">
                         <div>
                             <p className='text-base font-medium text-gray-500'>NEW CLIENT'S</p>
@@ -151,7 +151,7 @@ function Dashboard() {
                     <p className='text-base font-normal mt-5'><span className='text-red-500'>-2%</span>Since Last quarter</p>
                 </div>
 
-                <div className='flex-1 md:w-auto md:h-auto h-28 box-border border-2 border-gray-400 rounded-2xl px-6 py-2 bg-white mb-3 md:mb-0'>
+                <div data-aos='fade-down' data-aos-delay='1000' className='flex-1 md:w-auto md:h-auto h-28 box-border border-2 border-gray-400 rounded-2xl px-6 py-2 bg-white mb-3 md:mb-0'>
                     <div className="flex flex-1 items-center justify-between gap-4">
                         <div>
                             <p className='text-base font-medium text-gray-500'>SALES</p>
@@ -166,21 +166,21 @@ function Dashboard() {
             </div>
 
             <div className='md:flex flex-1 gap-5 ml-5'>
-                <div className="w-full max-w-4xl mx-auto mt-10 p-4 bg-white shadow-md rounded-xl border-none">
+                <div data-aos='fade-up' data-aos-delay='800' className="w-full max-w-4xl mx-auto mt-10 p-4 bg-white shadow-md rounded-xl border-none">
                     <Line data={data} options={options} />
                 </div>
 
-                <div className="relative w-full max-w-4xl mx-auto overflow-hidden rounded-xl shadow-lg mt-10">
-                <div
-        className="flex w-full md:h-[50vh]"
-        ref={sliderRef}
-      >
-        {images.map((image, index) => (
-          <div key={index} className="w-full flex-shrink-0">
-            <img src={image} alt={`Slide ${index}`} className="w-full h-full object-cover" />
-          </div>
-        ))}
-      </div>
+                <div data-aos='fade-up' data-aos-delay='800' className="relative w-full max-w-4xl mx-auto overflow-hidden rounded-xl shadow-lg mt-10">
+                    <div
+                        className="flex w-full md:h-[50vh]"
+                        ref={sliderRef}
+                    >
+                        {images.map((image, index) => (
+                            <div key={index} className="w-full flex-shrink-0">
+                                <img src={image} alt={`Slide ${index}`} className="w-full h-full object-cover" />
+                            </div>
+                        ))}
+                    </div>
                     <div className="absolute right-1 top-5 flex gap-8 items-center px-4">
                         <button
                             className="font-extrabold text-2xl text-white"
