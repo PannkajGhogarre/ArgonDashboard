@@ -98,7 +98,7 @@ const Sidebar = ({ isOpen }) => {
 
     return (
         <div className="flex md:pl-5">
-            <div className={` ${isOpen ? "md:w-64 w-full" : "md:w-20"} duration-300 h-auto max-h-screen overflow-y-auto p-2 md:mt-5 border-none border-gray-500 md:rounded-l-xl bg-white mx-auto`} >
+            <div className={` ${isOpen ? "md:w-64 w-full" : "md:w-20"} duration-300 h-auto p-2 md:mt-5 border-none border-gray-500 md:rounded-l-xl bg-white mx-auto`} >
                 <div className="flex gap-x-2 items-center px-2">
                     <img src="./image/download.png" className={`cursor-pointer duration-500 w-8`} />
                     <h1 className={`text-four origin-left font-medium text-base duration-200 ${!isOpen && "scale-0"}`} >

@@ -1,6 +1,7 @@
 import React from 'react'
 import { getStatus } from './utils/index'
 import { completion } from './utils/complete'
+import { motion } from 'framer-motion'
 
 const table = [
   {
@@ -126,7 +127,9 @@ const project = [
 const Tables = () => {
   return (
     <div className='p-5'>
-      <div data-aos='fade-left' data-aos-delay='800' className='bg-[white] px-4 py-5 rounded-xl border-none border-gray-200 flex-1'>
+      <motion.div
+      initial={{opacity:0, scale:0}} whileInView={{opacity:1, scale:1}} transition={{duration:0.9}}
+      className='bg-[white] px-4 py-5 rounded-xl border-none border-gray-200 flex-1'>
         <h1 className='pt-4 text-base font-bold'>Authors table</h1>
         <div className='border border-gray-200 mt-2'></div>
         <div className='mt-5 overflow-x-auto'>
@@ -156,9 +159,11 @@ const Tables = () => {
             </tbody>
           </table>
         </div>
-      </div>
+      </motion.div>
 
-      <div className='bg-[white] px-4 py-5 rounded-xl border-none border-gray-200 flex-1 mt-10'>
+      <motion.div
+      initial={{opacity:0, scale:0}} whileInView={{opacity:1, scale:1}} transition={{duration:0.9}}
+      className='bg-[white] px-4 py-5 rounded-xl border-none border-gray-200 flex-1 mt-10'>
         <h1 className='pt-4 text-base font-bold'>Projects table</h1>
         <div className='mt-5 overflow-x-auto'>
           <table className='w-full min-w-max'>
@@ -184,7 +189,7 @@ const Tables = () => {
             </tbody>
           </table>
         </div>
-      </div>
+      </motion.div>
     </div>
   )  
 }

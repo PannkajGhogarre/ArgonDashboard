@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { Line } from 'react-chartjs-2';
 import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend } from 'chart.js';
+import {motion} from 'framer-motion'
 
 ChartJS.register(
     CategoryScale,
@@ -112,7 +113,9 @@ function Dashboard() {
         <>
 
             <div className='md:flex flex-1 p-5 mt-5 gap-3 flex-wrap'>
-                <div data-aos='fade-up' data-aos-delay='1000' className='flex-1 md:w-auto md:h-auto h-28 box-border border-2 border-gray-400 rounded-2xl px-6 py-2 bg-white mb-3 md:mb-0'>
+                <motion.div
+                initial={{opacity:0, scale:0}} whileInView={{opacity:1, scale:1}} transition={{duration:0.9}}
+                className='flex-1 md:w-auto md:h-auto h-28 box-border border-2 border-gray-400 rounded-2xl px-6 py-2 bg-white mb-3 md:mb-0'>
                     <div className="flex flex-1 items-center justify-between gap-4">
                         <div>
                             <p className='text-base font-medium text-gray-500'>TODAY'S MONEY</p>
@@ -123,9 +126,11 @@ function Dashboard() {
                         </div>
                     </div>
                     <p className='text-base font-normal mt-5'><span className='text-green-500'>+55%</span>Since yesterday</p>
-                </div>
+                </motion.div>
 
-                <div data-aos='fade-down' data-aos-delay='1000' className='flex-1 md:w-auto md:h-auto h-28 box-border border-2 border-gray-400 rounded-2xl px-6 py-2 bg-white mb-3 md:mb-0'>
+                <motion.div
+                initial={{opacity:0, scale:0}} whileInView={{opacity:1, scale:1}} transition={{duration:0.9}}
+                className='flex-1 md:w-auto md:h-auto h-28 box-border border-2 border-gray-400 rounded-2xl px-6 py-2 bg-white mb-3 md:mb-0'>
                     <div className="flex flex-1 items-center justify-between gap-4">
                         <div>
                             <p className='text-base font-medium text-gray-500'>TODAY'S USERS</p>
@@ -136,9 +141,11 @@ function Dashboard() {
                         </div>
                     </div>
                     <p className='text-base font-normal mt-5'><span className='text-green-500'>3%</span>Since Last week</p>
-                </div>
+                </motion.div>
 
-                <div data-aos='fade-up' data-aos-delay='1000' className='flex-1 md:w-auto md:h-auto h-28 box-border border-2 border-gray-400 rounded-2xl px-6 py-2 bg-white mb-3 md:mb-0'>
+                <motion.div
+                initial={{opacity:0, scale:0}} whileInView={{opacity:1, scale:1}} transition={{duration:0.9}}
+                className='flex-1 md:w-auto md:h-auto h-28 box-border border-2 border-gray-400 rounded-2xl px-6 py-2 bg-white mb-3 md:mb-0'>
                     <div className="flex flex-1 items-center justify-between gap-4">
                         <div>
                             <p className='text-base font-medium text-gray-500'>NEW CLIENT'S</p>
@@ -149,9 +156,11 @@ function Dashboard() {
                         </div>
                     </div>
                     <p className='text-base font-normal mt-5'><span className='text-red-500'>-2%</span>Since Last quarter</p>
-                </div>
+                </motion.div>
 
-                <div data-aos='fade-down' data-aos-delay='1000' className='flex-1 md:w-auto md:h-auto h-28 box-border border-2 border-gray-400 rounded-2xl px-6 py-2 bg-white mb-3 md:mb-0'>
+                <motion.div
+                initial={{opacity:0, scale:0}} whileInView={{opacity:1, scale:1}} transition={{duration:0.9}}
+                className='flex-1 md:w-auto md:h-auto h-28 box-border border-2 border-gray-400 rounded-2xl px-6 py-2 bg-white mb-3 md:mb-0'>
                     <div className="flex flex-1 items-center justify-between gap-4">
                         <div>
                             <p className='text-base font-medium text-gray-500'>SALES</p>
@@ -162,15 +171,19 @@ function Dashboard() {
                         </div>
                     </div>
                     <p className='text-base font-normal mt-5'><span className='text-green-500'>+5%</span>than Last month</p>
-                </div>
+                </motion.div>
             </div>
 
             <div className='md:flex flex-1 gap-5 ml-5'>
-                <div data-aos='fade-up' data-aos-delay='800' className="w-full max-w-4xl mx-auto mt-10 p-4 bg-white shadow-md rounded-xl border-none">
+                <motion.div
+                initial={{opacity:0, scale:0}} whileInView={{opacity:1, scale:1}} transition={{duration:0.9}}
+                className="w-full max-w-4xl mx-auto mt-10 p-4 bg-white shadow-md rounded-xl border-none">
                     <Line data={data} options={options} />
-                </div>
+                </motion.div>
 
-                <div data-aos='fade-up' data-aos-delay='800' className="relative w-full max-w-4xl mx-auto overflow-hidden rounded-xl shadow-lg mt-10">
+                <motion.div
+                initial={{opacity:0, scale:0}} whileInView={{opacity:1, scale:1}} transition={{duration:0.9}}
+                className="relative w-full max-w-4xl mx-auto overflow-hidden rounded-xl shadow-lg mt-10">
                     <div
                         className="flex w-full md:h-[50vh]"
                         ref={sliderRef}
@@ -195,12 +208,14 @@ function Dashboard() {
                             <a href="#"><i className="ri-arrow-right-s-line"></i></a>
                         </button>
                     </div>
-                </div>
+                </motion.div>
 
             </div>
 
             <div className='md:flex ml-5 gap-4 flex-wrap mt-10'>
-                <div className='bg-white px-4 py-2 rounded-xl border border-gray-200 flex-1 w-full mb-3 md:mb-0'>
+                <motion.div
+                initial={{opacity:0, scale:0}} whileInView={{opacity:1, scale:1}} transition={{duration:0.9}}
+                className='bg-white px-4 py-2 rounded-xl border border-gray-200 flex-1 w-full mb-3 md:mb-0'>
                     <h1 className='pt-4 text-base font-bold'>Sales by Country</h1>
                     <div className='border border-gray-200 mt-2'></div>
                     <div className='mt-5 overflow-x-auto'>
@@ -220,9 +235,11 @@ function Dashboard() {
                             </tbody>
                         </table>
                     </div>
-                </div>
+                </motion.div>
 
-                <div className='bg-white px-4 py-4 rounded-xl border border-gray-200 min-w-72 flex-1 mb-3 md:mb-0'>
+                <motion.div
+                initial={{opacity:0, scale:0}} whileInView={{opacity:1, scale:1}} transition={{duration:0.9}}
+                className='bg-white px-4 py-4 rounded-xl border border-gray-200 min-w-72 flex-1 mb-3 md:mb-0'>
                     <h2 className='py-6 text-base font-bold'>Categories</h2>
                     <div className='flex justify-between py-3'>
                         <div className='flex gap-3'>
@@ -275,7 +292,7 @@ function Dashboard() {
                         </div>
                         <a href="#"><i className="ri-arrow-right-s-line text-xl"></i></a>
                     </div>
-                </div>
+                </motion.div>
             </div>
 
         </>

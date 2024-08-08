@@ -1,9 +1,10 @@
 import React from 'react'
+import { motion } from 'framer-motion'
 
 const Billing = () => {
   return (
     <>
-      <div data-aos='fade-up-left' data-aos-delay='800' className='md:flex gap-4 border border-gray-400 rounded-xl bg-white w-80 px-5 py-2 ml-4 mt-5 text-center'>
+      <div className='md:flex gap-4 border border-gray-400 rounded-xl bg-white w-80 px-5 py-2 ml-4 mt-5 text-center'>
         <p className=''>Massage</p>
         <p className=''>Social</p>
         <p className=''>Notification</p>
@@ -294,26 +295,34 @@ const Billing = () => {
 
       <div className='md:flex px-4 justify-between gap-3'>
         <div>
-          <div data-aos='fade-up-left' data-aos-delay='800' className='md:flex items-center gap-6'>
-            <div className='w-72 mx-auto'>
+          <div className='md:flex items-center gap-6'>
+            <motion.div
+            initial={{opacity:0, scale:0}} whileInView={{opacity:1, scale:1}} transition={{duration:0.9}}
+            className='w-72 mx-auto'>
               <img src="./credit-card.png" alt="card" />
-            </div>
-            <div className='border-none border-gray-400 bg-white rounded-xl py-2 px-6 text-center'>
+            </motion.div>
+            <motion.div
+            initial={{opacity:0, scale:0}} whileInView={{opacity:1, scale:1}} transition={{duration:0.9}}
+            className='border-none border-gray-400 bg-white rounded-xl py-2 px-6 text-center'>
               <img src="./home-button.png" alt="home-button" className='w-14 mx-auto' />
               <h3 className='text-xl font-medium mt-2'>Salary</h3>
               <p className='text-base font-normal mt-2'>Belong Interactive</p>
               <div className='border border-gray-200 mt-3'></div>
               <h1 className='text-xl font-bold mt-5'>+$2000</h1>
-            </div>
-            <div className='border-none border-gray-400 bg-white rounded-xl py-3 px-6 text-center'>
+            </motion.div>
+            <motion.div
+            initial={{opacity:0, scale:0}} whileInView={{opacity:1, scale:1}} transition={{duration:0.9}}
+            className='border-none border-gray-400 bg-white rounded-xl py-3 px-6 text-center'>
               <img src="./paypal.png" alt="paypal" className='w-14 mx-auto' />
               <h3 className='text-xl font-medium mt-2'>PayPal</h3>
               <p className='text-base font-normal mt-2'>Freelance Payment</p>
               <div className='border border-gray-200 mt-3'></div>
               <h1 className='text-xl font-bold mt-5'>$455.00</h1>
-            </div>
+            </motion.div>
           </div>
-          <div data-aos='fade-down-left' data-aos-delay='800' className='px-4 py-3 border-none border-gray-400 rounded-xl bg-white text-center'>
+          <motion.div
+          initial={{opacity:0, scale:0}} whileInView={{opacity:1, scale:1}} transition={{duration:0.9}}
+          className='px-4 py-3 border-none border-gray-400 rounded-xl bg-white text-center'>
             <div className='md:flex justify-between'>
               <h1 className='text-base font-medium text-gray-700'>Payment Method</h1>
               <button className='border border-gray-400 rounded-xl px-4 py-2 bg-gray-800 text-white'>+Add New Card</button>
@@ -334,9 +343,11 @@ const Billing = () => {
                 <a href="#"><i className="ri-pencil-fill"></i></a>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
-        <div data-aos='fade-up-right' data-aos-delay='800' className='px-4 py-2 border-none border-gray-400 bg-white rounded-xl mt-10'>
+        <motion.div
+        initial={{opacity:0, scale:0}} whileInView={{opacity:1, scale:1}} transition={{duration:0.9}}
+        className='px-4 py-2 border-none border-gray-400 bg-white rounded-xl mt-10'>
           <div className='md:flex gap-60 mt-3 md:text-left text-center'>
             <h2 className='text-base font-medium'>Invoices</h2>
             <button className='border border-gray-400 rounded-xl bg-white text-cyan-400 px-6 py-1 text-sm'>View All</button>
@@ -359,11 +370,13 @@ const Billing = () => {
               </div>
             </div>
           ))}
-        </div>
+        </motion.div>
       </div>
 
       <div className='md:flex px-4 py-2 justify-between gap-3'>
-        <div className='px-3 py-2 mt-5 border border-gray-400 bg-white rounded-xl md:text-left text-center'>
+        <motion.div
+        initial={{opacity:0, scale:0}} whileInView={{opacity:1, scale:1}} transition={{duration:0.9}}
+        className='px-3 py-2 mt-5 border border-gray-400 bg-white rounded-xl md:text-left text-center'>
           <h2 className='text-xl font-medium p-2'>Billing Information</h2>
           {[
             { name: 'Oliver Liam', company: 'Viking Burrito', email: 'oliver@burrito.com', vat: 'FRB1235476' },
@@ -398,8 +411,10 @@ const Billing = () => {
               </div>
             </div>
           ))}
-        </div>
-        <div className='w-full px-3 py-4 mt-5 border border-gray-400 bg-white rounded-xl md:text-left text-center'>
+        </motion.div>
+        <motion.div
+        initial={{opacity:0, scale:0}} whileInView={{opacity:1, scale:1}} transition={{duration:0.9}}
+        className='w-full px-3 py-4 mt-5 border border-gray-400 bg-white rounded-xl md:text-left text-center'>
           <div className='md:flex gap-52'>
             <h3 className='text-base font-medium'>Your Transactions</h3>
             <div className='flex gap-2 items-center justify-center'>
@@ -442,7 +457,7 @@ const Billing = () => {
               </div>
             ))}
           </div>
-        </div>
+        </motion.div>
       </div>
 
     </>
